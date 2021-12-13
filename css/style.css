@@ -1,0 +1,140 @@
+
+
+
+.container-set{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.content{
+    width: 270px;
+}
+.Head{
+    background-color: green;
+    width:70%;
+    height: 100px;
+    margin: 0px auto;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    position: relative;
+}
+/*.eye{*/
+
+/*    position: absolute;*/
+/*    top: 50px;*/
+/*    right: 60px;*/
+/*}*/
+.eye{
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.lefteye{
+    right: 50px;
+}
+.righteye{
+    left: 50px;
+}
+.shakh{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    bottom: 70%;
+}
+.rightShakh , .leftShakh{
+    background-color: green;
+    width: 10%;
+    height: 50px;
+    border-radius: 20px;
+}
+.rightShakh{
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+.leftShakh{
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+}
+.body{
+    display: flex;
+    justify-content:space-around ;
+
+}
+.badan{
+    background-color: green;
+    margin-top: 20px;
+    width: 70%;
+    height: 200px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: relative;
+}
+.rightHand ,.leftHand{
+    background-color: green;
+    margin-top: 20px;
+    width: 10%;
+    height: 150px;
+    border-radius: 20px;
+    transform-origin: top;
+}
+.foot{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+}
+.leftFoot , .rightFoot{
+    background-color: green;
+    width: 15%;
+    height: 150px;
+    border-radius: 20px;
+
+}
+.transformRightHand{
+    transition: all ease-out 2s;
+    animation-name: rightHand;
+    animation-duration: 4s;
+}
+@keyframes rightHand {
+    0% {
+        transform: rotateZ(0deg)
+
+    }
+    50%{
+        transform: rotateZ(-160deg);
+    }
+    100%{
+        transform: rotateZ(0deg)
+    }
+}
+.transformLeftHand{
+    transition: all ease-out 2s;
+    animation-name: leftHand;
+
+    animation-duration: 4s;
+}
+@keyframes leftHand {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    50%{
+        transform: rotateZ(160deg);
+    }
+    100%{
+        transform: rotateZ(0deg)
+    }
+}

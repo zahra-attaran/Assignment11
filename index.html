@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+<div class="container-set">
+    <div class="content">
+        <div class="Head" id="Head">
+            <div class="eyes ">
+                <div class="lefteye eye" id="lefteye"></div>
+                <div class="righteye eye" id="righteye"></div>
+            </div>
+            <div class="shakh">
+                <div class="leftShakh"></div>
+                <div class="rightShakh"></div>
+            </div>
+        </div>
+        <div class="body" id="body">
+            <div class="leftHand" id="leftHand"></div>
+            <div class="badan" id="badan">
+                <div class="foot">
+                    <div class="leftFoot"></div>
+                    <div class="rightFoot"></div>
+                </div>
+            </div>
+            <div class="rightHand" id="rightHand"></div>
+        </div>
+
+    </div>
+</div>
+<script>
+    var rightHAnd = document.getElementById("rightHand");
+    rightHAnd.onclick = function () {
+        rightHAnd.classList.add("transformRightHand");
+        setTimeout(function () {
+            rightHAnd.classList.remove("transformRightHand");
+        }, 4000)
+    }
+    var leftHAnd = document.getElementById("leftHand");
+    leftHAnd.onclick = function () {
+        leftHAnd.classList.add("transformLeftHand");
+        setTimeout(function () {
+            leftHAnd.classList.remove("transformLeftHand");
+        }, 4000)
+    }
+    var badan = document.getElementById("badan");
+    var lefteye = document.getElementById("lefteye")
+    var righteye = document.getElementById("righteye")
+    badan.onclick = function () {
+        lefteye.style.width="30px";
+        lefteye.style.height="5px";
+        lefteye.style.borderRadius="20%";
+        righteye.style.width="30px";
+        righteye.style.height="5px";
+        righteye.style.borderRadius="20%";
+
+    }
+    var Head = document.getElementById("Head");
+    Head.onclick = function () {
+        lefteye.style.width="20px";
+        lefteye.style.height="20px";
+        lefteye.style.borderRadius="50%";
+        righteye.style.width="20px";
+        righteye.style.height="20px";
+        righteye.style.borderRadius="50%";
+    }
+</script>
+<script src="js/bootstrap.js"></script>
+<script src="js/js.js"></script>
+</body>
+</html>
